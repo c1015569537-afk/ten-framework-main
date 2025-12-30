@@ -1,0 +1,2 @@
+speechmatics-python==4.0.0
+aiofiles

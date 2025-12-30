@@ -1,0 +1,12 @@
+{
+    "params": {
+        "key": "${env:SPEECHMATICS_API_KEY|}",
+        "language": "en",
+        "sample_rate": 16000,
+        "diarization": "speaker",
+        "speaker_sensitivity": 0.35,
+        "max_speakers": 10,
+        "prefer_current_speaker": true,
+        "audio_gain": 7.0
+    }
+}

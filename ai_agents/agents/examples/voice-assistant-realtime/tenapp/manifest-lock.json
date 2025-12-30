@@ -1,0 +1,245 @@
+{
+  "version": 1,
+  "packages": [
+    {
+      "type": "system",
+      "name": "ten_runtime_go",
+      "version": "0.11.46",
+      "hash": "6196aa59b14d2d11b20d644b29986c8553ffa83576d2698711fceb366a4624cd",
+      "dependencies": [
+        {
+          "type": "system",
+          "name": "ten_runtime"
+        }
+      ],
+      "supports": [
+        {
+          "os": "linux",
+          "arch": "x64"
+        }
+      ]
+    },
+    {
+      "type": "extension",
+      "name": "agora_rtc",
+      "version": "0.23.9-t1",
+      "hash": "6f08c87c362d30bbfd831899435fec06982a2924bd9cc0f5cb7e936974bf5731",
+      "dependencies": [
+        {
+          "type": "system",
+          "name": "ten_runtime"
+        },
+        {
+          "type": "system",
+          "name": "agora_rtc_sdk"
+        }
+      ],
+      "supports": [
+        {
+          "os": "linux",
+          "arch": "x64"
+        }
+      ]
+    },
+    {
+      "type": "system",
+      "name": "ten_ai_base",
+      "version": "0.7.30",
+      "hash": "1608448d02897a411f6b863974fcaf12a695e0f588ceab1250e5581344dd0280",
+      "dependencies": [
+        {
+          "type": "system",
+          "name": "ten_runtime_python"
+        }
+      ]
+    },
+    {
+      "type": "extension",
+      "name": "streamid_adapter",
+      "version": "0.2.0",
+      "hash": "6df9a1b48a4007339ccbda84ff96a4ed4eb5df498b8fef021ca2302be7c55051",
+      "dependencies": [
+        {
+          "type": "system",
+          "name": "ten_runtime_python"
+        }
+      ],
+      "path": "../../../ten_packages/extension/streamid_adapter"
+    },
+    {
+      "type": "extension",
+      "name": "azure_mllm_python",
+      "version": "0.2.0",
+      "hash": "23ada63d4e5d995fe13ecde3b87989b911cc5dcc7a401c70be578e82d156ed05",
+      "dependencies": [
+        {
+          "type": "system",
+          "name": "ten_runtime_python"
+        }
+      ],
+      "path": "../../../ten_packages/extension/azure_mllm_python"
+    },
+    {
+      "type": "extension",
+      "name": "gemini_mllm_python",
+      "version": "0.2.0",
+      "hash": "8d37c2526e3f1ddcf57ef39da4c7aea0f9166b87147161de915d3687bbc58a4e",
+      "dependencies": [
+        {
+          "type": "system",
+          "name": "ten_runtime_python"
+        },
+        {
+          "type": "system",
+          "name": "ten_ai_base"
+        }
+      ],
+      "path": "../../../ten_packages/extension/gemini_mllm_python"
+    },
+    {
+      "type": "extension",
+      "name": "glm_mllm_python",
+      "version": "0.2.0",
+      "hash": "f0c7358654be9dca83dae78d1477938fd7e9ffb78e7fc4fedac575ecdb075021",
+      "dependencies": [
+        {
+          "type": "system",
+          "name": "ten_runtime_python"
+        },
+        {
+          "type": "system",
+          "name": "ten_ai_base"
+        }
+      ],
+      "path": "../../../ten_packages/extension/glm_mllm_python"
+    },
+    {
+      "type": "extension",
+      "name": "openai_mllm_python",
+      "version": "0.2.0",
+      "hash": "37251262de24cb7c2c4a01a8aa0455dcfa93ed178a2f5cfebe9ffac8d58ec007",
+      "dependencies": [
+        {
+          "type": "system",
+          "name": "ten_runtime_python"
+        },
+        {
+          "type": "system",
+          "name": "ten_ai_base"
+        }
+      ],
+      "path": "../../../ten_packages/extension/openai_mllm_python"
+    },
+    {
+      "type": "extension",
+      "name": "stepfun_mllm_python",
+      "version": "0.2.0",
+      "hash": "b51c721f7a3bee4f2f31a7a848ccce909a71ca26952fad9a0d50cfe744c239a0",
+      "dependencies": [
+        {
+          "type": "system",
+          "name": "ten_runtime_python"
+        },
+        {
+          "type": "system",
+          "name": "ten_ai_base"
+        }
+      ],
+      "path": "../../../ten_packages/extension/stepfun_mllm_python"
+    },
+    {
+      "type": "extension",
+      "name": "message_collector2",
+      "version": "0.2.0",
+      "hash": "b4cdc75c61ed572952e2f14bdb5c440f993d3a5bf2da6fe5f5cbb1b4d772a837",
+      "dependencies": [
+        {
+          "type": "system",
+          "name": "ten_runtime_python"
+        }
+      ],
+      "path": "../../../ten_packages/extension/message_collector2"
+    },
+    {
+      "type": "extension",
+      "name": "weatherapi_tool_python",
+      "version": "0.1.0",
+      "hash": "372a4ffffd03992ee2e7a50b0fe83d534b4ed49c0d15099fb0c9cf5ea5cc926c",
+      "dependencies": [
+        {
+          "type": "system",
+          "name": "ten_runtime_python"
+        }
+      ],
+      "path": "../../../ten_packages/extension/weatherapi_tool_python"
+    },
+    {
+      "type": "system",
+      "name": "ten_runtime_python",
+      "version": "0.11.46",
+      "hash": "c4e7e5f3a4d1d8d2c5618b33e376aa21de605cf9055c43fc92c121a63cfd2572",
+      "dependencies": [
+        {
+          "type": "system",
+          "name": "ten_runtime"
+        },
+        {
+          "type": "addon_loader",
+          "name": "python_addon_loader"
+        }
+      ],
+      "supports": [
+        {
+          "os": "linux",
+          "arch": "x64"
+        }
+      ]
+    },
+    {
+      "type": "system",
+      "name": "ten_runtime",
+      "version": "0.11.46",
+      "hash": "364606d382fa37de1d9e23e2cc9cbc654197b051ef0ef4c4f1b75ef7418fa0e0",
+      "supports": [
+        {
+          "os": "linux",
+          "arch": "x64"
+        }
+      ]
+    },
+    {
+      "type": "system",
+      "name": "agora_rtc_sdk",
+      "version": "4.4.32-141",
+      "hash": "ce8f50da194f74610735c74450c5c04bbee7f56959431d628349082b90742eb8",
+      "supports": [
+        {
+          "os": "linux",
+          "arch": "x64"
+        }
+      ]
+    },
+    {
+      "type": "addon_loader",
+      "name": "python_addon_loader",
+      "version": "0.11.46",
+      "hash": "dbe89b59f49c6669141f75f2b6865649ba5b3f02eb235e1d7924b05199655657",
+      "dependencies": [
+        {
+          "type": "system",
+          "name": "ten_runtime"
+        },
+        {
+          "type": "system",
+          "name": "ten_runtime_python"
+        }
+      ],
+      "supports": [
+        {
+          "os": "linux",
+          "arch": "x64"
+        }
+      ]
+    }
+  ]
+}

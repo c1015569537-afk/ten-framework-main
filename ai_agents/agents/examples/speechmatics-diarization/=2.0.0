@@ -1,0 +1,6 @@
+Looking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple/
+Requirement already satisfied: pydantic in /usr/local/lib/python3.10/dist-packages (2.12.5)
+Requirement already satisfied: typing-extensions>=4.14.1 in /usr/local/lib/python3.10/dist-packages (from pydantic) (4.15.0)
+Requirement already satisfied: pydantic-core==2.41.5 in /usr/local/lib/python3.10/dist-packages (from pydantic) (2.41.5)
+Requirement already satisfied: annotated-types>=0.6.0 in /usr/local/lib/python3.10/dist-packages (from pydantic) (0.7.0)
+Requirement already satisfied: typing-inspection>=0.4.2 in /usr/local/lib/python3.10/dist-packages (from pydantic) (0.4.2)

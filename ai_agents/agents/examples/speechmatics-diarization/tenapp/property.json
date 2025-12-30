@@ -1,0 +1,173 @@
+{
+  "ten": {
+    "predefined_graphs": [
+      {
+        "name": "diarization_demo",
+        "auto_start": true,
+        "graph": {
+          "nodes": [
+            {
+              "type": "extension",
+              "name": "agora_rtc",
+              "addon": "agora_rtc",
+              "extension_group": "default",
+              "property": {
+                "app_id": "${env:AGORA_APP_ID}",
+                "app_certificate": "${env:AGORA_APP_CERTIFICATE|}",
+                "channel": "ten_diarization_who_likes_what",
+                "stream_id": 0,
+                "subscribe_audio": true,
+                "subscribe_audio_sample_rate": 48000,
+                "subscribe_audio_num_of_channels": 1,
+                "subscribe_audio_frame_source": "on_playback_before_mixing",
+                "publish_audio": true,
+                "publish_data": true,
+                "enable_agora_asr": false,
+                "audio_scenario": 9
+              }
+            },
+            {
+              "type": "extension",
+              "name": "stt",
+              "addon": "speechmatics_asr_python",
+              "extension_group": "stt",
+              "property": {
+                "params": {
+                  "api_keys": ["${env:SPEECHMATICS_API_KEY}", "${env:SPEECHMATICS_API_KEY}", "${env:SPEECHMATICS_API_KEY}"],
+                  "language": "en",
+                  "sample_rate": 48000,
+                  "diarization": "speaker",
+                  "speaker_sensitivity": 0.30,
+                  "max_speakers": 50,
+                  "prefer_current_speaker": true,
+                  "enable_word_final_mode": true,
+                  "max_delay": 1.0,
+                  "max_delay_mode": "flexible",
+                  "audio_gain": 5.5,
+                  "operating_point": "enhanced"
+                }
+              }
+            },
+            {
+              "type": "extension",
+              "name": "main_control",
+              "addon": "main_python",
+              "extension_group": "control",
+              "property": {
+                "greeting": ""
+              }
+            },
+            {
+              "type": "extension",
+              "name": "message_collector",
+              "addon": "message_collector2",
+              "extension_group": "transcriber",
+              "property": {}
+          }
+          ],
+          "connections": [
+            {
+              "extension": "agora_rtc",
+              "audio_frame": [
+                {
+                  "name": "pcm_frame",
+                  "dest": [
+                    {
+                      "extension": "stt"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "extension": "main_control",
+              "cmd": [
+                {
+                  "name": "on_user_joined",
+                  "source": [
+                    {
+                      "extension": "agora_rtc"
+                    }
+                  ]
+                },
+                {
+                  "name": "on_user_left",
+                  "source": [
+                    {
+                      "extension": "agora_rtc"
+                    }
+                  ]
+                }
+              ],
+              "data": [
+                {
+                  "name": "asr_result",
+                  "source": [
+                    {
+                      "extension": "stt"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "extension": "message_collector",
+              "data": [
+                {
+                  "name": "asr_result",
+                  "source": [
+                    {
+                      "extension": "stt"
+                    }
+                  ]
+                },
+                {
+                  "name": "message",
+                  "source": [
+                    {
+                      "extension": "main_control"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "extension": "agora_rtc",
+              "data": [
+                {
+                  "name": "data",
+                  "source": [
+                    {
+                      "extension": "message_collector"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "log": {
+      "handlers": [
+        {
+          "matchers": [
+            {
+              "level": "debug"
+            }
+          ],
+          "formatter": {
+            "type": "plain",
+            "colored": true
+          },
+          "emitter": {
+            "type": "console",
+            "config": {
+              "stream": "stdout"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

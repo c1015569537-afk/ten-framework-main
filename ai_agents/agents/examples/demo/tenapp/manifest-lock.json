@@ -1,0 +1,313 @@
+{
+  "version": 1,
+  "packages": [
+    {
+      "type": "system",
+      "name": "ten_runtime_go",
+      "version": "0.11.27",
+      "hash": "3cb246f95ec5e22b2c1a44ed6c09d75af07755030172fa6abc97f35822405c77",
+      "dependencies": [
+        {
+          "type": "system",
+          "name": "ten_runtime"
+        }
+      ],
+      "supports": [
+        {
+          "os": "linux",
+          "arch": "x64"
+        }
+      ]
+    },
+    {
+      "type": "system",
+      "name": "ten_ai_base",
+      "version": "0.7.22",
+      "hash": "27e5467c5dc841757f5a6f52e70b0d2c09903be84ade73b404b45c6cac9888f8",
+      "dependencies": [
+        {
+          "type": "system",
+          "name": "ten_runtime_python"
+        }
+      ]
+    },
+    {
+      "type": "extension",
+      "name": "agora_rtc",
+      "version": "0.23.9-t1",
+      "hash": "6f08c87c362d30bbfd831899435fec06982a2924bd9cc0f5cb7e936974bf5731",
+      "dependencies": [
+        {
+          "type": "system",
+          "name": "ten_runtime"
+        },
+        {
+          "type": "system",
+          "name": "agora_rtc_sdk"
+        }
+      ],
+      "supports": [
+        {
+          "os": "linux",
+          "arch": "x64"
+        }
+      ]
+    },
+    {
+      "type": "extension",
+      "name": "azure_asr_python",
+      "version": "0.2.2",
+      "hash": "519e0eb0656b0ab9d5af9dfbf23db6b40e7a474a1301d01aa6a38b6ab8b0dd0f",
+      "dependencies": [
+        {
+          "type": "system",
+          "name": "ten_runtime_python"
+        },
+        {
+          "type": "system",
+          "name": "ten_ai_base"
+        }
+      ],
+      "path": "../../../ten_packages/extension/azure_asr_python"
+    },
+    {
+      "type": "extension",
+      "name": "azure_mllm_python",
+      "version": "0.2.0",
+      "hash": "23ada63d4e5d995fe13ecde3b87989b911cc5dcc7a401c70be578e82d156ed05",
+      "dependencies": [
+        {
+          "type": "system",
+          "name": "ten_runtime_python"
+        }
+      ],
+      "path": "../../../ten_packages/extension/azure_mllm_python"
+    },
+    {
+      "type": "extension",
+      "name": "azure_tts_python",
+      "version": "0.3.0",
+      "hash": "2cb8ff4f0927e283c9e9a78cef7f241792f058fbbc7ac5e83e2bf679e9192c07",
+      "dependencies": [
+        {
+          "type": "system",
+          "name": "ten_runtime_python"
+        },
+        {
+          "type": "system",
+          "name": "ten_ai_base"
+        }
+      ],
+      "path": "../../../ten_packages/extension/azure_tts_python"
+    },
+    {
+      "type": "extension",
+      "name": "coze_llm2_python",
+      "version": "0.2.0",
+      "hash": "6056efcc889c5cdb85b104d19d97f01f6cd33dc831634d2249b6729fa4340325",
+      "dependencies": [
+        {
+          "type": "system",
+          "name": "ten_runtime_python"
+        },
+        {
+          "type": "system",
+          "name": "ten_ai_base"
+        }
+      ],
+      "path": "../../../ten_packages/extension/coze_llm2_python"
+    },
+    {
+      "type": "extension",
+      "name": "dify_llm2_python",
+      "version": "0.2.0",
+      "hash": "2e4e13f3a99d855ffd6715cc830fd65dcfa39bf5a2a8b2e7ffbac938f82d870b",
+      "dependencies": [
+        {
+          "type": "system",
+          "name": "ten_runtime_python"
+        },
+        {
+          "type": "system",
+          "name": "ten_ai_base"
+        }
+      ],
+      "path": "../../../ten_packages/extension/dify_llm2_python"
+    },
+    {
+      "type": "extension",
+      "name": "gemini_mllm_python",
+      "version": "0.2.0",
+      "hash": "8d37c2526e3f1ddcf57ef39da4c7aea0f9166b87147161de915d3687bbc58a4e",
+      "dependencies": [
+        {
+          "type": "system",
+          "name": "ten_runtime_python"
+        },
+        {
+          "type": "system",
+          "name": "ten_ai_base"
+        }
+      ],
+      "path": "../../../ten_packages/extension/gemini_mllm_python"
+    },
+    {
+      "type": "extension",
+      "name": "message_collector2",
+      "version": "0.2.0",
+      "hash": "b4cdc75c61ed572952e2f14bdb5c440f993d3a5bf2da6fe5f5cbb1b4d772a837",
+      "dependencies": [
+        {
+          "type": "system",
+          "name": "ten_runtime_python"
+        }
+      ],
+      "path": "../../../ten_packages/extension/message_collector2"
+    },
+    {
+      "type": "extension",
+      "name": "oceanbase_powerrag_python",
+      "version": "0.2.0",
+      "hash": "715809da3917aaf851764529b6e99651daea10eb7b8c10316d9be31ee03f5745",
+      "dependencies": [
+        {
+          "type": "system",
+          "name": "ten_runtime_python"
+        },
+        {
+          "type": "system",
+          "name": "ten_ai_base"
+        }
+      ],
+      "path": "../../../ten_packages/extension/oceanbase_powerrag_python"
+    },
+    {
+      "type": "extension",
+      "name": "openai_llm2_python",
+      "version": "0.2.0",
+      "hash": "ad24801cf718276830749bc50d72c5eba969e5d0ae7538ebd6e6d1ad0b414244",
+      "dependencies": [
+        {
+          "type": "system",
+          "name": "ten_runtime_python"
+        },
+        {
+          "type": "system",
+          "name": "ten_ai_base"
+        }
+      ],
+      "path": "../../../ten_packages/extension/openai_llm2_python"
+    },
+    {
+      "type": "extension",
+      "name": "openai_mllm_python",
+      "version": "0.2.0",
+      "hash": "37251262de24cb7c2c4a01a8aa0455dcfa93ed178a2f5cfebe9ffac8d58ec007",
+      "dependencies": [
+        {
+          "type": "system",
+          "name": "ten_runtime_python"
+        },
+        {
+          "type": "system",
+          "name": "ten_ai_base"
+        }
+      ],
+      "path": "../../../ten_packages/extension/openai_mllm_python"
+    },
+    {
+      "type": "extension",
+      "name": "streamid_adapter",
+      "version": "0.2.0",
+      "hash": "6df9a1b48a4007339ccbda84ff96a4ed4eb5df498b8fef021ca2302be7c55051",
+      "dependencies": [
+        {
+          "type": "system",
+          "name": "ten_runtime_python"
+        }
+      ],
+      "path": "../../../ten_packages/extension/streamid_adapter"
+    },
+    {
+      "type": "extension",
+      "name": "weatherapi_tool_python",
+      "version": "0.1.0",
+      "hash": "372a4ffffd03992ee2e7a50b0fe83d534b4ed49c0d15099fb0c9cf5ea5cc926c",
+      "dependencies": [
+        {
+          "type": "system",
+          "name": "ten_runtime_python"
+        }
+      ],
+      "path": "../../../ten_packages/extension/weatherapi_tool_python"
+    },
+    {
+      "type": "system",
+      "name": "ten_runtime_python",
+      "version": "0.11.27",
+      "hash": "409c90d00363ff575f7e7d3c6285047c609748490ffb5da52910efc983941c91",
+      "dependencies": [
+        {
+          "type": "system",
+          "name": "ten_runtime"
+        },
+        {
+          "type": "addon_loader",
+          "name": "python_addon_loader"
+        }
+      ],
+      "supports": [
+        {
+          "os": "linux",
+          "arch": "x64"
+        }
+      ]
+    },
+    {
+      "type": "system",
+      "name": "ten_runtime",
+      "version": "0.11.27",
+      "hash": "96129244e41310723b93f2eeef06c41d51eb8086d60a703d3665495af3880050",
+      "supports": [
+        {
+          "os": "linux",
+          "arch": "x64"
+        }
+      ]
+    },
+    {
+      "type": "system",
+      "name": "agora_rtc_sdk",
+      "version": "4.4.32-141",
+      "hash": "d0a96b4672127492eee249f123750638071f9bcb673b5371320c8e16cdaff1b5",
+      "supports": [
+        {
+          "os": "linux",
+          "arch": "x64"
+        }
+      ]
+    },
+    {
+      "type": "addon_loader",
+      "name": "python_addon_loader",
+      "version": "0.11.27",
+      "hash": "a15c56876f5303b0c47d4019a51e9586f449d38a1cf52b5848746174c1bc5838",
+      "dependencies": [
+        {
+          "type": "system",
+          "name": "ten_runtime"
+        },
+        {
+          "type": "system",
+          "name": "ten_runtime_python"
+        }
+      ],
+      "supports": [
+        {
+          "os": "linux",
+          "arch": "x64"
+        }
+      ]
+    }
+  ]
+}
