@@ -7,6 +7,8 @@ WORKDIR /app
 COPY .env.example .env
 COPY server/ server/
 COPY agents/scripts/ agents/scripts/
+# Fix: Add execute permissions to shell scripts
+RUN find agents/scripts -type f -name "*.sh" -exec chmod +x {} +
 COPY agents/ten_packages/ agents/ten_packages/
 COPY ${USE_AGENT}/frontend/ ${USE_AGENT}/frontend/
 
@@ -16,6 +18,8 @@ COPY ${USE_AGENT}/tenapp/main.go ${USE_AGENT}/tenapp/
 COPY ${USE_AGENT}/tenapp/manifest* ${USE_AGENT}/tenapp/
 COPY ${USE_AGENT}/tenapp/property.json ${USE_AGENT}/tenapp/
 COPY ${USE_AGENT}/tenapp/scripts/ ${USE_AGENT}/tenapp/scripts/
+# Fix: Add execute permissions to tenapp scripts
+RUN find ${USE_AGENT}/tenapp/scripts -type f -name "*.sh" -exec chmod +x {} +
 
 # Copy extension directories that are actual directories (not symlinks)
 COPY ${USE_AGENT}/tenapp/ten_packages/extension/main_python/ ${USE_AGENT}/tenapp/ten_packages/extension/main_python/
